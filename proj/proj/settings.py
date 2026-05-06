@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'bonjour',
     'converter',
     'bureau',
+    'topmenu',
 ]
 
 MIDDLEWARE = [

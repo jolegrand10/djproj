@@ -16,12 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from topmenu.views import index
 urlpatterns = [
+    path('', index, name='index'),
     path('zdmin/', admin.site.urls),
-    path('bonjour/', include('bonjour.urls')),
-    path('converter/', include('converter.urls')),
-    path('bureau/', include('bureau.urls')),
+    path('bonjour/', include('bonjour.urls'), name="bonjour"),
+    path('converter/', include('converter.urls'), name="converter"),
+    path('bureau/', include('bureau.urls'), name="bureau"),
 ]
 
 

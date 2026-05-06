@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Convertisseur de devise </title>
+	</head>
+	<body>
+	<label>Devise de départ: </label>{{devise1}}<br/>
+	<label>Devise d'arrivée: {{devise2}}</label> 
+	<label>Taux: </label><p>{{taux}}</p>
+	<!-- manque un formulaire avec  montant à convertir  et un bouton ok-->
+	<form method ="post">
+		{% csrf_token %}
+		<label for ="montant">Montant:  </label>
+		<input name="montant" type="number" step="0.01" value={{montant}}> 
+		<br/>
+        <button type="submit">Convertir</button>
+	</form>
+
+	<label>Montant converti: </label>
+	<p>{{montantConverti}}</p>
+	</body>
+</html>
